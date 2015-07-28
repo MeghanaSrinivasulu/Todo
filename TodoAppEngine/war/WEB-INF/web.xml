@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  
+    <servlet>
+        <servlet-name>GetInProgressTasksServlet</servlet-name>
+        <servlet-class>com.java.todo.GetInProgressTasksServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetPendingTasksServlet</servlet-name>
+        <servlet-class>com.java.todo.GetPendingTasksServlet</servlet-class>
+    </servlet>
+	<servlet>
+	    <servlet-name>CreateTodoServlet</servlet-name>
+	    <servlet-class>com.java.todo.CreateTodoServlet</servlet-class>
+	</servlet>
+	<servlet>
+	    <servlet-name>ListTodoServlet</servlet-name>
+	    <servlet-class>com.java.todo.ListTodosServlet</servlet-class>
+	</servlet>
+	<servlet>
+	    <servlet-name>DeleteTodoServlet</servlet-name>
+	    <servlet-class>com.java.todo.DeleteTodoServlet</servlet-class>
+	</servlet>
+	<servlet>
+	    <servlet-name>EditTodoServlet</servlet-name>
+	    <servlet-class>com.java.todo.EditTodoServlet</servlet-class>
+	</servlet>
+	<servlet>
+	    <servlet-name>MarkAsComplete</servlet-name>
+	    <servlet-class>com.java.todo.MarkAsCompleteServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>CreateTodoServlet</servlet-name>
+	    <url-pattern>/addtask</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+	    <servlet-name>ListTodoServlet</servlet-name>
+	    <url-pattern>/gettodos/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+	    <servlet-name>DeleteTodoServlet</servlet-name>
+	    <url-pattern>/deltasks</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+	    <servlet-name>EditTodoServlet</servlet-name>
+	    <url-pattern>/edittask</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+	    <servlet-name>MarkAsComplete</servlet-name>
+	    <url-pattern>/markAsComplete</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+	    <servlet-name>GetInProgressTasksServlet</servlet-name>
+	    <url-pattern>/getInProgressTasks</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+	    <servlet-name>GetPendingTasksServlet</servlet-name>
+	    <url-pattern>/getPendingTasks</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
